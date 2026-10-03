@@ -43,28 +43,28 @@ An editorial-style homepage for a fictional digital magazine covering technology
 
 ## Page Sections
 
-| Order | Section | Content |
-| --- | --- | --- |
-| 1 | Navigation | Date, logo, search, bookmark, Subscribe, category links |
-| 2 | Hero | Cover story: "The Intelligence Architects" |
-| 3 | Featured | One large card and two small cards |
-| 4 | Ticker | Six breaking-news headlines, repeated for a seamless loop |
-| 5 | Latest | Four article rows and a Load More Stories button |
-| 6 | Sidebar | Trending (five items), Editor's Pick, The Weekly Brief newsletter |
-| 7 | Explore | Four category blocks |
-| 8 | Footer | Brand tagline, Topics, Company, and Readers link groups, legal links |
+| Order | Section    | Content                                                              |
+| ----- | ---------- | -------------------------------------------------------------------- |
+| 1     | Navigation | Date, logo, search, bookmark, Subscribe, category links              |
+| 2     | Hero       | Cover story: "The Intelligence Architects"                           |
+| 3     | Featured   | One large card and two small cards                                   |
+| 4     | Ticker     | Six breaking-news headlines, repeated for a seamless loop            |
+| 5     | Latest     | Four article rows and a Load More Stories button                     |
+| 6     | Sidebar    | Trending (five items), Editor's Pick, The Weekly Brief newsletter    |
+| 7     | Explore    | Four category blocks                                                 |
+| 8     | Footer     | Brand tagline, Topics, Company, and Readers link groups, legal links |
 
 ## Tech Stack
 
-| Category | Technology |
-| --- | --- |
-| Markup | HTML5 with semantic elements (`nav`, `section`, `main`, `aside`, `article`, `footer`) |
-| Styling | Hand-written CSS3 with custom properties, Grid, Flexbox, `clamp()`, keyframe animations, and `position: sticky` |
-| Fonts | Google Fonts: Cormorant Garamond (serif) and Syne (sans-serif) |
-| Icons | Font Awesome 6.5.0, loaded from cdnjs |
-| Images | Photographs loaded from Pexels URLs, plus a local favicon |
-| JavaScript | None |
-| Build tooling | None |
+| Category      | Technology                                                                                                      |
+| ------------- | --------------------------------------------------------------------------------------------------------------- |
+| Markup        | HTML5 with semantic elements (`nav`, `section`, `main`, `aside`, `article`, `footer`)                           |
+| Styling       | Hand-written CSS3 with custom properties, Grid, Flexbox, `clamp()`, keyframe animations, and `position: sticky` |
+| Fonts         | Google Fonts: Cormorant Garamond (serif) and Syne (sans-serif)                                                  |
+| Icons         | Font Awesome 6.5.0, loaded from cdnjs                                                                           |
+| Images        | Photographs loaded from Pexels URLs, plus a local favicon                                                       |
+| JavaScript    | None                                                                                                            |
+| Build tooling | None                                                                                                            |
 
 ## Project Structure
 
@@ -108,13 +108,13 @@ There are no dependencies to install and no build step.
 
 The stylesheet is organized into numbered sections, and its design tokens are declared as CSS custom properties on `:root`.
 
-| Group | Examples |
-| --- | --- |
-| Colors | `--bg`, `--bg-alt`, `--surface`, `--ink-primary`, `--ink-secondary`, `--ink-muted`, `--accent`, `--accent-dark`, `--accent-warm`, `--border` |
-| Typography | `--font-serif` (Cormorant Garamond), `--font-sans` (Syne) |
-| Layout | `--max-width` (1240px), `--gutter`, `--section-gap` |
-| Motion | `--t-fast`, `--t-mid`, `--t-slow` |
-| Depth | `--shadow-sm`, `--shadow-md`, `--shadow-lg`, `--shadow-lift` |
+| Group      | Examples                                                                                                                                     |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Colors     | `--bg`, `--bg-alt`, `--surface`, `--ink-primary`, `--ink-secondary`, `--ink-muted`, `--accent`, `--accent-dark`, `--accent-warm`, `--border` |
+| Typography | `--font-serif` (Cormorant Garamond), `--font-sans` (Syne)                                                                                    |
+| Layout     | `--max-width` (1240px), `--gutter`, `--section-gap`                                                                                          |
+| Motion     | `--t-fast`, `--t-mid`, `--t-slow`                                                                                                            |
+| Depth      | `--shadow-sm`, `--shadow-md`, `--shadow-lg`, `--shadow-lift`                                                                                 |
 
 Class names follow a block-element-modifier style, for example `card--large`, `article-row-cat--ai`, and `cat-block--design`. Each topic (AI, Design, Startups, Hardware) has its own category modifier class for color treatment.
 
@@ -122,11 +122,11 @@ Class names follow a block-element-modifier style, for example `card--large`, `a
 
 The layout adapts at three max-width breakpoints:
 
-| Breakpoint | Behavior |
-| --- | --- |
-| 1100px and narrower | The sidebar narrows to 280px, the featured grid becomes two columns with the large card spanning both, the category grid becomes two columns, and the footer stacks with a three-column link area |
-| 860px and narrower | The date stamp is hidden, the hero height is reduced, the featured grid and the content-plus-sidebar layout become single columns, the sidebar is no longer sticky, and the footer links use two columns |
-| 600px and narrower | Navigation padding and category link size shrink, the hero deck is hidden, article rows use a compact 100px image, the category grid becomes one column, and the footer bottom bar stacks |
+| Breakpoint          | Behavior                                                                                                                                                                                                 |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1100px and narrower | The sidebar narrows to 280px, the featured grid becomes two columns with the large card spanning both, the category grid becomes two columns, and the footer stacks with a three-column link area        |
+| 860px and narrower  | The date stamp is hidden, the hero height is reduced, the featured grid and the content-plus-sidebar layout become single columns, the sidebar is no longer sticky, and the footer links use two columns |
+| 600px and narrower  | Navigation padding and category link size shrink, the hero deck is hidden, article rows use a compact 100px image, the category grid becomes one column, and the footer bottom bar stacks                |
 
 The hero headline also scales fluidly with `clamp()`.
 
@@ -175,7 +175,9 @@ The page does not include a meta description, Open Graph tags, a canonical URL, 
 
 ## License
 
-No license file is included in this repository, so no license is granted by default. Add a `LICENSE` file to specify the terms under which the code may be used.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+Copyright (c) 2026 Ubaid Ahmad
 
 ## Acknowledgements
 
