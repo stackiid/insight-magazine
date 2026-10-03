@@ -1,81 +1,184 @@
-# 📰 Insight - Technology & Ideas
+# Insight - Technology & Ideas
 
-An editorial-style digital magazine homepage covering technology, AI, design, and startups, built with static HTML5 and CSS3.
+![HTML5](https://img.shields.io/badge/HTML-5-E34F26)
+![CSS3](https://img.shields.io/badge/CSS-3-1572B6)
+![JavaScript](https://img.shields.io/badge/JavaScript-none-lightgrey)
 
-<div align="center">
+An editorial-style homepage for a fictional digital magazine covering technology, AI, design, and startups, built with static HTML5 and CSS3. The page recreates the layout patterns of a modern publication: a cover-story hero, a mixed-size featured grid, a scrolling news ticker, a content-plus-sidebar section, and a category browse grid.
 
-### 🔗 [**View Live Demo**](https://stackiid.github.io/insight-magazine/) 🔗
+## Live Demo
 
-</div>
+[https://stackiid.github.io/insight-magazine/](https://stackiid.github.io/insight-magazine/)
 
----
+## Table of Contents
 
-## 📖 Overview
+- [Features](#features)
+- [Page Sections](#page-sections)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Design System](#design-system)
+- [Responsive Design](#responsive-design)
+- [Accessibility](#accessibility)
+- [SEO](#seo)
+- [Performance Considerations](#performance-considerations)
+- [Known Limitations](#known-limitations)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-Insight is a static front-end recreation of a modern tech-and-ideas publication's homepage - the kind of layout you'd see on a digital-first magazine site. It was built as a front-end practice project focused on editorial layout patterns: a cover-story hero, a mixed-size featured grid, a scrolling breaking-news ticker, a two-column content-plus-sidebar layout, and a category browse section, all without a JavaScript framework.
+## Features
 
-## ✨ Features
+- Sticky primary navigation with a date stamp, centered logo, search and bookmark icons, and a Subscribe button
+- Secondary category navigation row (Technology, Artificial Intelligence, Design, Startups, Hardware, Culture, Opinion, and a highlighted "This Week" link) that scrolls horizontally on narrow screens
+- Full-width cover-story hero with a gradient overlay, issue tag, headline, deck, byline, date, and read time
+- Featured grid with one large card beside two stacked smaller cards
+- Breaking-news ticker that scrolls continuously using a CSS keyframe animation on a duplicated content track, and pauses on hover
+- "Latest" article list with image, category, headline, summary, author, date, and read time
+- Sidebar with a numbered Trending list, an Editor's Pick card, and a newsletter signup block; the sidebar stays in view while scrolling on wide screens
+- "Explore" category grid with background images, headline callouts, and article counts for AI, Design, Startups, and Hardware
+- Multi-column footer with a tagline, social icons, three link groups, and legal links
+- Staggered fade-in entrance animations on the hero and cards
+- Reduced-motion support that shortens animations and transitions for users who request it
 
-- Sticky navigation bar with date stamp, logo, search/bookmark icons, and a subscribe CTA
-- Secondary category nav row (Technology, AI, Design, Startups, Hardware, Culture, Opinion, "This Week")
-- Full-bleed cover-story hero with gradient overlay, issue tag, and read-time metadata
-- Featured articles grid mixing one large card with two stacked smaller cards
-- Auto-scrolling breaking-news ticker with a duplicated track for a seamless loop
-- Two-column "Latest" article list paired with a sidebar
-- Sidebar widgets: numbered Trending list, Editor's Pick card, and a newsletter signup form
-- "Explore" category grid with per-topic background images, headline callouts, and article counts
-- Multi-column footer with brand blurb, social links, and topic/company/reader link groups
+## Page Sections
 
-## 🧠 Concepts Demonstrated
+| Order | Section | Content |
+| --- | --- | --- |
+| 1 | Navigation | Date, logo, search, bookmark, Subscribe, category links |
+| 2 | Hero | Cover story: "The Intelligence Architects" |
+| 3 | Featured | One large card and two small cards |
+| 4 | Ticker | Six breaking-news headlines, repeated for a seamless loop |
+| 5 | Latest | Four article rows and a Load More Stories button |
+| 6 | Sidebar | Trending (five items), Editor's Pick, The Weekly Brief newsletter |
+| 7 | Explore | Four category blocks |
+| 8 | Footer | Brand tagline, Topics, Company, and Readers link groups, legal links |
 
-| Concept                    | Where it shows up                                                                                             |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Semantic HTML5             | `<nav>`, `<section>`, `<main>`, `<aside>`, `<article>`, `<footer>` with matching `aria-label`s                |
-| CSS Grid & Flexbox         | Featured grid, content + sidebar layout, category grid, footer columns                                        |
-| CSS keyframe animation     | Infinite-scroll breaking-news ticker (duplicated content track, no JS)                                        |
-| Responsive design          | Layout adapts from multi-column desktop down to a stacked single-column view                                  |
-| Accessibility              | `role="navigation"`/`role="contentinfo"`, `aria-label` on every landmark, `tabindex="0"` on interactive cards |
-| BEM-style CSS naming       | Consistent `block-element--modifier` naming throughout `styles.css`                                           |
-| Third-party integration    | Google Fonts (Cormorant Garamond, Syne) + Font Awesome 6 via CDN                                              |
-| Content hierarchy patterns | Distinct visual treatment for cover story vs. featured vs. latest vs. trending content                        |
+## Tech Stack
 
-## 📁 Project Structure
+| Category | Technology |
+| --- | --- |
+| Markup | HTML5 with semantic elements (`nav`, `section`, `main`, `aside`, `article`, `footer`) |
+| Styling | Hand-written CSS3 with custom properties, Grid, Flexbox, `clamp()`, keyframe animations, and `position: sticky` |
+| Fonts | Google Fonts: Cormorant Garamond (serif) and Syne (sans-serif) |
+| Icons | Font Awesome 6.5.0, loaded from cdnjs |
+| Images | Photographs loaded from Pexels URLs, plus a local favicon |
+| JavaScript | None |
+| Build tooling | None |
 
-```
+## Project Structure
+
+```text
 insight-magazine/
-├── index.html                    # All page markup - nav, hero, featured grid, ticker,
-│                                 # latest articles, sidebar, category grid, footer
-├── styles/
-|   └── style.css                 # All styling - layout, typography, ticker animation, responsive rules
-└── assets/
-    ├── favicon.png               # Browser tab icon
-    └── insight-magazine.png      # Brand asset
+|-- assets/
+|   |-- favicon.png            # Browser tab icon
+|   `-- insight-magazine.png   # Full-page screenshot of the homepage
+|-- styles/
+|   `-- style.css              # All styles: tokens, layout, components, animations, responsive rules
+|-- index.html                 # Complete page markup
+`-- README.md
 ```
 
-## 🚀 Getting Started
+## Prerequisites
 
-**Prerequisites:** a web browser. No build tools, no package manager, no dependencies to install.
+- A modern web browser
+- An internet connection, because the fonts, icons, and photographs are loaded from external hosts
+- Optional: Python 3, if you want to serve the site through a local web server
+
+## Getting Started
+
+Clone the repository and move into it:
 
 ```bash
-# Clone the repo
-git clone <your-repo-url>
+git clone https://github.com/stackiid/insight-magazine.git
 cd insight-magazine
-
-# Open directly
-# Option A - just double-click index.html
-
-# Option B - serve locally (recommended for correct relative paths)
-python -m http.server 8000
-# then visit http://localhost:8000
 ```
 
-## 📝 Notes
+Open `index.html` directly in a browser, or serve the folder locally:
 
-- All article imagery is pulled from Pexels via direct URLs - swap these for your own assets before production use.
-- Every link (`href="#"`), the subscribe button, search/bookmark icons, "Load More Stories," and the newsletter form are static placeholders - none are wired to a CMS, search index, or email service.
-- Article headlines, bylines, and dates are illustrative content, not real reporting.
-- Future improvement: connect the newsletter form to a real provider (e.g., Mailchimp, ConvertKit) and wire the category/nav links to actual article-listing pages.
+```bash
+python3 -m http.server 8000
+```
 
-## 📄 License
+Then visit `http://localhost:8000`.
 
-MIT - see the [LICENSE](./LICENSE) file in the root of the repository.
+There are no dependencies to install and no build step.
+
+## Design System
+
+The stylesheet is organized into numbered sections, and its design tokens are declared as CSS custom properties on `:root`.
+
+| Group | Examples |
+| --- | --- |
+| Colors | `--bg`, `--bg-alt`, `--surface`, `--ink-primary`, `--ink-secondary`, `--ink-muted`, `--accent`, `--accent-dark`, `--accent-warm`, `--border` |
+| Typography | `--font-serif` (Cormorant Garamond), `--font-sans` (Syne) |
+| Layout | `--max-width` (1240px), `--gutter`, `--section-gap` |
+| Motion | `--t-fast`, `--t-mid`, `--t-slow` |
+| Depth | `--shadow-sm`, `--shadow-md`, `--shadow-lg`, `--shadow-lift` |
+
+Class names follow a block-element-modifier style, for example `card--large`, `article-row-cat--ai`, and `cat-block--design`. Each topic (AI, Design, Startups, Hardware) has its own category modifier class for color treatment.
+
+## Responsive Design
+
+The layout adapts at three max-width breakpoints:
+
+| Breakpoint | Behavior |
+| --- | --- |
+| 1100px and narrower | The sidebar narrows to 280px, the featured grid becomes two columns with the large card spanning both, the category grid becomes two columns, and the footer stacks with a three-column link area |
+| 860px and narrower | The date stamp is hidden, the hero height is reduced, the featured grid and the content-plus-sidebar layout become single columns, the sidebar is no longer sticky, and the footer links use two columns |
+| 600px and narrower | Navigation padding and category link size shrink, the hero deck is hidden, article rows use a compact 100px image, the category grid becomes one column, and the footer bottom bar stacks |
+
+The hero headline also scales fluidly with `clamp()`.
+
+## Accessibility
+
+Implemented practices visible in the code:
+
+- `lang="en"` on the root element
+- Semantic landmarks with matching `aria-label` values, plus `role="navigation"` and `role="contentinfo"`
+- `aria-label` on icon-only links such as Search, Saved articles, and the social icons
+- `aria-hidden` on decorative icons and separators
+- Descriptive `alt` text on every image
+- `tabindex="0"` on cards, article rows, and trending items so they can be reached by keyboard
+- Visible `:focus-visible` styles for links, buttons, inputs, and focusable elements
+- A `prefers-reduced-motion` rule that shortens animations and transitions
+- `<time>` elements with `datetime` attributes for dates
+
+No accessibility audit or WCAG conformance level is claimed.
+
+## SEO
+
+The `<head>` of `index.html` contains:
+
+- A page title
+- A viewport meta tag
+- A favicon link
+
+The page does not include a meta description, Open Graph tags, a canonical URL, a sitemap, or `robots.txt`.
+
+## Performance Considerations
+
+- The site ships no JavaScript and no build output
+- Article images below the hero use `loading="lazy"`, and the hero image uses `loading="eager"`
+- Google Fonts are requested with `preconnect` hints and `display=swap`
+- Images do not declare `width` and `height` attributes, so layout may shift while they load
+- `assets/insight-magazine.png` is a screenshot used only for documentation and is not loaded by the page
+
+## Known Limitations
+
+- Every link uses a `#` placeholder, including navigation, article, footer, and social links
+- The Subscribe button, Search and bookmark icons, Load More Stories button, and newsletter input are not connected to any functionality; the newsletter fields are not inside a `<form>` element
+- The date in the navigation bar ("Tuesday, May 5, 2026") is written directly into the markup
+- All articles, bylines, dates, statistics, and headlines are invented sample content, and several headlines name real companies and people; replace them before using the layout for anything public
+- The "Breaking" ticker is marked with `role="marquee"` and moves continuously, with no pause control other than hovering over it
+- Photographs depend on Pexels URLs and will not load without an internet connection
+
+## License
+
+No license file is included in this repository, so no license is granted by default. Add a `LICENSE` file to specify the terms under which the code may be used.
+
+## Acknowledgements
+
+- Photographs from [Pexels](https://www.pexels.com)
+- Typefaces from [Google Fonts](https://fonts.google.com): Cormorant Garamond and Syne
+- Icons from [Font Awesome](https://fontawesome.com)
